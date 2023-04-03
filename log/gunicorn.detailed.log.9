@@ -1,0 +1,104 @@
+[2023-04-03 11:58:46,579] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 11:58:52,830] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:58:52] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 11:58:55,547] ERROR log_exception() L1449 Exception on /produto [POST] - call_trace=C:\Python311\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 52, in add_produto
+    logger.debug(f"Adicionado produto de nome: '{produto.nome}'")
+                                                 ^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sqlalchemy\orm\attributes.py", line 482, in __get__
+    return self.impl.get(state, dict_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sqlalchemy\orm\attributes.py", line 942, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sqlalchemy\orm\attributes.py", line 973, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\sqlalchemy\orm\state.py", line 712, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "C:\Python311\Lib\site-packages\sqlalchemy\orm\loading.py", line 1369, in load_scalar_attributes
+    raise orm_exc.DetachedInstanceError(
+sqlalchemy.orm.exc.DetachedInstanceError: Instance <Produto at 0x19cd5f194d0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)
+[2023-04-03 11:58:55,740] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:58:55] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 11:59:37,755] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.179:5000 (Press CTRL+C to quit) - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 11:59:37,771] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 11:59:55,665] WARNING add_produto() L58   Erro ao adicionar produto 'Banana Prata', Produto de mesmo nome já salvo na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L58  
+[2023-04-03 11:59:55,683] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:59:55] "[31m[1mPOST /produto HTTP/1.1[0m" 409 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:00:07,746] WARNING add_produto() L58   Erro ao adicionar produto 'Banana Prata', Produto de mesmo nome já salvo na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L58  
+[2023-04-03 12:00:07,796] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 12:00:07] "[31m[1mPOST /produto HTTP/1.1[0m" 409 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:03:27,539] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\schemas\\produto.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:03:28,047] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:04,442] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:05,340] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:11,534] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 12:05:11] "[35m[1mGET /produtos HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:11,771] ERROR _log() L224  Error on request:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python311\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 29, in <module>
+    @app.post('/produto', tags=[produto_tag],
+  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 170, in decorator
+    self._do_decorator(
+  File "C:\Python311\Lib\site-packages\flask_openapi3\openapi.py", line 248, in _do_decorator
+    header, cookie, path, query, form, body = parse_parameters(
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 394, in parse_parameters
+    _content, _components_schemas = parse_body(body, extra_body)
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 205, in parse_body
+    schema = get_schema(body)
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 66, in get_schema
+    assert inspect.isclass(obj) and \
+AssertionError: <class 'inspect._empty'><class 'type'> is invalid `pydantic.BaseModel` - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:17,728] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 12:05:17] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:05:17,780] ERROR _log() L224  Error on request:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python311\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 29, in <module>
+    @app.post('/produto', tags=[produto_tag],
+  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 170, in decorator
+    self._do_decorator(
+  File "C:\Python311\Lib\site-packages\flask_openapi3\openapi.py", line 248, in _do_decorator
+    header, cookie, path, query, form, body = parse_parameters(
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 394, in parse_parameters
+    _content, _components_schemas = parse_body(body, extra_body)
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 205, in parse_body
+    schema = get_schema(body)
+  File "C:\Python311\Lib\site-packages\flask_openapi3\utils.py", line 66, in get_schema
+    assert inspect.isclass(obj) and \
+AssertionError: <class 'inspect._empty'><class 'type'> is invalid `pydantic.BaseModel` - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:06:22,447] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:06:23,443] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:07:13,925] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:07:14,244] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:07:22,422] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 12:07:22] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:10:30,704] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:10:31,584] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-03 12:10:40,001] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 12:10:40] "[31m[1mPOST /produto HTTP/1.1[0m" 400 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
