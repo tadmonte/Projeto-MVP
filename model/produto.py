@@ -15,7 +15,7 @@ class Produto(Base):
     quantidade = Column(Integer)
     valor = Column(Float)
     data_insercao = Column(DateTime, default=datetime.now())
-    unidade: Column(String(140), unique=True)
+    unidade = Column(String(140))
     validade = Column(DateTime)
 
    

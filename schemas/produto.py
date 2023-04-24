@@ -9,10 +9,10 @@ from datetime import datetime
 class ProdutoSchema(BaseModel):
     """ Define como um novo produto a ser inserido deve ser representado
     """
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
-    unidade: str = "Rio de Janeiro"
+    nome: str = "Toxina Botulínica 3ml"
+    quantidade: Optional[int] = 50
+    valor: float = 1768.34
+    unidade: str = "Rio Design Barra - RJ"
     validade: datetime = datetime.now()
 
 
@@ -39,7 +39,7 @@ def apresenta_produtos(produtos: List[Produto]):
             "nome": produto.nome,
             "quantidade": produto.quantidade,
             "valor": produto.valor,
-            #"unidade": produto.unidade,
+            "unidade": produto.unidade,
             "validade": produto.validade
         })
 
@@ -50,11 +50,10 @@ class ProdutoViewSchema(BaseModel):
     """ Define como um produto será retornado: produto + comentários.
     """
     id: int = 1
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
-    unidade: str="Rio de Janeiro"
-    total_cometarios: int = 1
+    nome: str = "Toxina Botulínica 3ml"
+    quantidade: Optional[int] = 50
+    valor: float = 1768.34
+    unidade: str = "Rio Design Barra - RJ"
     validade: datetime = datetime.now()
    
 
