@@ -14,7 +14,7 @@ info = Info(title="API Consumíveis", version="1.0.0")
 app = OpenAPI(__name__, info=info)
 CORS(app)
 
-# definindo tags
+
 
 produto_tag = Tag(name="Produto", description="Adição, visualização e remoção de produtos à base")
 
@@ -33,7 +33,7 @@ def add_produto(body: ProdutoSchema):
 
     Retorna uma representação dos produtos.
     """
-    #body = request.get_json()
+    
     print(body)
     produto = Produto(
         nome=body.nome,
@@ -45,11 +45,9 @@ def add_produto(body: ProdutoSchema):
     logger.debug(f"Adicionando produto de nome: '{produto.nome}'")
     
     try:
-        # criando conexão com a base
+        
         session = Session()
-        # adicionando produto
         session.add(produto)
-        # efetivando o camando de adição de novo item na tabela
         session.commit()
         logger.debug(f"Adicionado produto de nome: '{produto.nome}'")
         return apresenta_produto(produto), 200
@@ -60,24 +58,22 @@ def add_produto(body: ProdutoSchema):
         logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
         return {"mesage": error_msg}, 409
 
-    # except Exception as e:
-    #     # caso um erro fora do previsto
-    #     error_msg = "Não foi possível salvar novo item :/"
-    #     logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
-    #     return {"mesage": error_msg}, 400
+    except Exception as e:
+        # caso um erro fora do previsto
+        error_msg = "Não foi possível salvar novo item :/"
+        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
+        return {"mesage": error_msg}, 400
 
 
 @app.get('/produtos', tags=[produto_tag],
          responses={"200": ListagemProdutosSchema, "404": ErrorSchema})
 def get_produtos():
-    """Faz a busca por todos os Produto cadastrados
+    """Lista todos os produtos cadastrados no banco.
 
     Retorna uma representação da listagem de produtos.
     """
     logger.debug(f"Coletando produtos ")
-    # criando conexão com a base
     session = Session()
-    # fazendo a busca
     produtos = session.query(Produto).all()
 
     if not produtos:
