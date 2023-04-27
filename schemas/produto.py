@@ -20,7 +20,7 @@ class ProdutoBuscaSchema(BaseModel):
     """ Define como deve ser a estrutura que representa a busca. Que será
         feita apenas com base no nome do produto.
     """
-    nome: str = "Consumível"
+    id: str = "1"
 
 
 class ListagemProdutosSchema(BaseModel):
@@ -36,6 +36,7 @@ def apresenta_produtos(produtos: List[Produto]):
     result = []
     for produto in produtos:
         result.append({
+            "id": produto.id,
             "nome": produto.nome,
             "quantidade": produto.quantidade,
             "valor": produto.valor,

@@ -32,6 +32,7 @@ class Produto(Base):
             valor: valor esperado para o produto
             data_insercao: data de quando o produto foi inserido à base
         """
+        
         self.nome = nome
         self.quantidade = quantidade
         self.valor = valor

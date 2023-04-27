@@ -42,6 +42,8 @@ def add_produto(body: ProdutoSchema):
         unidade=body.unidade,
         validade=datetime.strptime(body.validade,'%Y-%m-%d'))
         
+    print(produto.id)
+
     logger.debug(f"Adicionando produto de nome: '{produto.nome}'")
     
     try:
@@ -56,6 +58,7 @@ def add_produto(body: ProdutoSchema):
     except Exception as e:
         # caso um erro fora do previsto
         error_msg = "Não foi possível salvar novo item :/"
+        print(e)
         logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
         return {"mesage": error_msg}, 400
 
@@ -90,23 +93,23 @@ def del_produto(query: ProdutoBuscaSchema):
     """Deleta um Produto a partir do nome informado
     Retorna uma mensagem de confirmação da remoção.
     """
-    produto_nome = unquote(unquote(query.nome))
-    print(produto_nome)
-    logger.debug(f"Deletando dados sobre produto #{produto_nome}")
+    produto_id = unquote(unquote(query.id))
+    print(produto_id)
+    logger.debug(f"Deletando dados sobre produto #{produto_id}")
     # criando conexão com a base
     session = Session()
     # fazendo a remoção
-    count = session.query(Produto).filter(Produto.nome == produto_nome).delete()
+    count = session.query(Produto).filter(Produto.id == produto_id).delete()
     session.commit()
 
     if count:
         # retorna a representação da mensagem de confirmação
-        logger.debug(f"Deletado produto #{produto_nome}")
-        return {"mesage": "Produto removido", "nome": produto_nome}
+        logger.debug(f"Deletado produto #{produto_id}")
+        return {"mesage": "Produto removido", "id": produto_id}
     else:
         # se o produto não foi encontrado
         error_msg = "Produto não encontrado na base :/"
-        logger.warning(f"Erro ao deletar produto #'{produto_nome}', {error_msg}")
+        logger.warning(f"Erro ao deletar produto #'{produto_id}', {error_msg}")
         return {"mesage": error_msg}, 404
 
 
