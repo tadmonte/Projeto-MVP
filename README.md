@@ -14,6 +14,8 @@ Recomenda-se o uso de ambientes virtuais, como o **virtualenv**, para evitar con
 
 Para criar um ambiente virtual, basta rodar o comando **python -m venv env**.
 
+Para iniciar o ambiente virtual, basta rodar o comando **env/Scripts/Activate**
+
 Para instalar as dependências, basta rodar o comando **pip install -r requirements.txt**.
 
 Para iniciar a API, execute o comando **python -m flask run --host 0.0.0.0 --port 5000**. Se estiver em modo de desenvolvimento.
