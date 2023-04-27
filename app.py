@@ -26,7 +26,7 @@ def home():
     return redirect('/openapi')
 
 
-@app.post('/produto', tags=[produto_tag],
+@app.post('/item', tags=[produto_tag],
           responses={"200": ProdutoViewSchema, "409": ErrorSchema, "400": ErrorSchema})
 def add_produto(body: ProdutoSchema):
     """Adiciona um novo Produto à base de dados
@@ -63,7 +63,7 @@ def add_produto(body: ProdutoSchema):
         return {"mesage": error_msg}, 400
 
 
-@app.get('/produtos', tags=[produto_tag],
+@app.get('/lista', tags=[produto_tag],
          responses={"200": ListagemProdutosSchema, "404": ErrorSchema})
 def get_produtos():
     """Lista todos os produtos cadastrados no banco.
@@ -87,7 +87,7 @@ def get_produtos():
 
 
 
-@app.delete('/produto', tags=[produto_tag],
+@app.delete('/excluir', tags=[produto_tag],
             responses={"200": ProdutoDelSchema, "404": ErrorSchema})
 def del_produto(query: ProdutoBuscaSchema):
     """Deleta um Produto a partir do nome informado
