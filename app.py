@@ -52,11 +52,6 @@ def add_produto(body: ProdutoSchema):
         logger.debug(f"Adicionado produto de nome: '{produto.nome}'")
         return apresenta_produto(produto), 200
         
-    except IntegrityError as e:
-        # como a duplicidade do nome é a provável razão do IntegrityError
-        error_msg = "Produto de mesmo nome já salvo na base :/"
-        logger.warning(f"Erro ao adicionar produto '{produto.nome}', {error_msg}")
-        return {"mesage": error_msg}, 409
 
     except Exception as e:
         # caso um erro fora do previsto
