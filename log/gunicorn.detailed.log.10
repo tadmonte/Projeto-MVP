@@ -1,110 +1,46 @@
-[2023-04-03 11:41:36,557] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:41:36,701] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:41:59,540] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:41:59,863] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:00,394] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:00,896] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:20,335] INFO _log() L224   * Running on all addresses (0.0.0.0)
+[2023-04-27 12:37:21,154] WARNING del_produto() L112  Erro ao deletar produto #'4', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:37:21,186] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:37:21] "[33mDELETE /produto?id=4 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:37:29,579] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:37:29] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:37:29,587] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:37:29,588] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:37:29] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:37:41,478] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:37:41] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:06,643] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:06] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:06,653] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:06,658] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:06] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:10,123] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:10] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:10,130] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:10,131] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:10] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:13,784] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:13] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:13,794] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:13,796] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:13] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:16,234] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:16] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:16,243] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:16,244] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:16] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:20,046] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:20] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:20,053] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:20,057] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:20] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:22,677] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:22] "OPTIONS /produto?id=11 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:22,690] WARNING del_produto() L112  Erro ao deletar produto #'11', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:43:22,691] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:22] "[33mDELETE /produto?id=11 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:44,258] INFO _log() L224   * Running on all addresses (0.0.0.0)
    WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.179:5000 (Press CTRL+C to quit) - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:20,346] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:25,781] ERROR log_exception() L1449 Exception on /produtos [GET] - call_trace=C:\Python311\Lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 76, in get_produtos
-    session = Session()
-              ^^^^^^^
-NameError: name 'Session' is not defined
-[2023-04-03 11:42:25,928] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:42:25] "[35m[1mGET /produtos HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:42:34,712] ERROR log_exception() L1449 Exception on /produto [POST] - call_trace=C:\Python311\Lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 45, in add_produto
-    session = Session()
-              ^^^^^^^
-NameError: name 'Session' is not defined
-[2023-04-03 11:42:34,740] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:42:34] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:44:10,479] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\model\\produto.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:44:10,957] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:47:28,615] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:47:28,865] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:47:49,959] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:47:49] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:47:59,549] ERROR log_exception() L1449 Exception on /produto [POST] - call_trace=C:\Python311\Lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "C:\Python311\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 36, in add_produto
-    produto = Produto(
-              ^^^^^^^^
-TypeError: __init__() missing 1 required positional argument: 'unidade'
-[2023-04-03 11:47:59,628] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:47:59] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:49:01,210] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\app.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:49:01,599] INFO _log() L224   * Restarting with stat - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:49:06,867] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:49:06] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:49:16,845] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:49:16] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:55:02,338] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:55:02] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:55:43,859] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:55:43] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:56:55,127] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:56:55] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:56:59,269] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:56:59] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:57:05,679] INFO _log() L224  127.0.0.1 - - [03/Apr/2023 11:57:05] "[35m[1mPOST /produto HTTP/1.1[0m" 500 - - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-03 11:58:45,338] INFO _log() L224   * Detected change in 'C:\\Users\\aluga.com\\Desktop\\TADEU MONTE\\Projeto-MVP\\schemas\\produto.py', reloading - call_trace=C:\Python311\Lib\site-packages\werkzeug\_internal.py L224 
+ * Running on http://192.168.0.179:5000 (Press CTRL+C to quit) - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:52,650] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:52] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:55,401] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:55] "OPTIONS /produto?id=10 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:55,421] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:55] "DELETE /produto?id=10 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:43:58,383] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:43:58] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:02,290] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:02] "OPTIONS /produto?id=7 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:02,309] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:02] "DELETE /produto?id=7 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:05,244] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:05] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:08,030] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:08] "OPTIONS /produto?id=6 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:08,047] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:08] "DELETE /produto?id=6 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:10,876] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:10] "GET /produtos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:17,426] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:17] "OPTIONS /produto?id=5 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:17,445] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:17] "DELETE /produto?id=5 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:20,732] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:20] "OPTIONS /produto?id=5 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:20,744] WARNING del_produto() L112  Erro ao deletar produto #'5', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:44:20,746] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:20] "[33mDELETE /produto?id=5 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:23,169] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:23] "OPTIONS /produto?id=5 HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-27 12:44:23,178] WARNING del_produto() L112  Erro ao deletar produto #'5', Produto não encontrado na base :/ - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py L112 
+[2023-04-27 12:44:23,179] INFO _log() L224  127.0.0.1 - - [27/Apr/2023 12:44:23] "[33mDELETE /produto?id=5 HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
