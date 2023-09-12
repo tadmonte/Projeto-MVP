@@ -1,92 +1,44 @@
-[2023-09-12 16:32:51,585] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:51] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:32:51,773] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:51] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:32:51,855] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:51] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:32:52,144] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:52] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:32:52,308] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:52] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:32:59,448] ERROR log_exception() L1449 Exception on /editar/ [PUT] - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 78, in editar
-    produto = session.query(Produto).filter(Produto.id == body.id).first()
-                                                          ^^^^^^^
-AttributeError: 'ProdutoEditarSchema' object has no attribute 'id'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 97, in editar
-    logger.error(f"Erro ao editar produto com ID {produto_id}: {str(e)}")
-                                                  ^^^^^^^^^^
-NameError: name 'produto_id' is not defined
-[2023-09-12 16:32:59,464] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:32:59] "[35m[1mPUT /editar/ HTTP/1.1[0m" 500 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:44,967] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:44] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:44,999] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:44] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:45,017] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:45] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:45,062] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:45] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:45,385] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:45] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:45,423] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:45] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:33:52,534] ERROR log_exception() L1449 Exception on /editar/ [PUT] - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 78, in editar
-    produto = session.query(Produto).filter(Produto.id == body.id).first()
-                                                          ^^^^^^^
-AttributeError: 'ProdutoEditarSchema' object has no attribute 'id'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
-    resp = _do_wrapper(
-           ^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\app.py", line 97, in editar
-    logger.error(f"Erro ao editar produto com ID {produto_id}: {str(e)}")
-                                                  ^^^^^^^^^^
-NameError: name 'produto_id' is not defined
-[2023-09-12 16:33:52,627] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:33:52] "[35m[1mPUT /editar/ HTTP/1.1[0m" 500 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:12,883] INFO _log() L224   * Running on all addresses (0.0.0.0)
+[2023-09-12 17:45:51,539] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:45:51] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:45:54,887] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:45:54] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:46:12,776] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:46:12] "DELETE /deletartodos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:02,588] INFO _log() L224   * Running on all addresses (0.0.0.0)
    WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.179:5000 (Press CTRL+C to quit) - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:17,208] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:34:17] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:17,331] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:34:17] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:17,977] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:34:17] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:17,997] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:34:17] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-09-12 16:34:18,028] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 16:34:18] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:31,121] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:31] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:31,217] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:31] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:31,426] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:31] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:31,533] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:31] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:31,579] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:31] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:38,313] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:38] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:38,356] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:38] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:38,362] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:38] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:38,403] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:38] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:55:38,877] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:55:38] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:56:48,571] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:56:48] "GET /lista HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:56:58,727] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:56:58] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:56:58,766] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:56:58] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:18,893] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:18] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:18,925] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:18] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:20,046] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:20] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:20,180] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:20] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:23,752] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:23] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:23,787] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:23] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:23,937] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:23] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:23,979] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:23] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:24,123] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:24] "OPTIONS /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:24,173] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:24] "POST /item HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:39,576] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:39] "GET /lista HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:50,763] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:50] "GET /lista HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:55,476] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:55] "GET /lista HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:57:58,708] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:57:58] "GET /lista HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:14,686] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:14] "DELETE /deletartodos HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:15,975] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:15] "[33mDELETE /deletartodos HTTP/1.1[0m" 404 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:26,144] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:26] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:26,240] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:26] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:26,562] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:26] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:26,678] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:26] "[36mGET /openapi/static/images/redoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:26,735] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:26] "[36mGET /openapi/static/images/rapidoc.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:27,214] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:27] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:27,283] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:27] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-09-12 17:58:27,294] INFO _log() L224  127.0.0.1 - - [12/Sep/2023 17:58:27] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\aluga.com\Desktop\TADEU MONTE\Projeto-MVP\env\Lib\site-packages\werkzeug\_internal.py L224 

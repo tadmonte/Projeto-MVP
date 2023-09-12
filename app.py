@@ -175,3 +175,22 @@ def del_produto(query: ProdutoBuscaSchema):
     return apresenta_produto(produto), 200
 
 
+@app.delete('/deletartodos', tags=[produto_tag],
+            responses={"200": ProdutoDelSchema, "404": ErrorSchema})
+def delete_all_produtos():
+    
+    try:
+        session = Session()
+        # Deleta todos os produtos
+        count = session.query(Produto).delete()
+        session.commit()
+
+        if count:
+            return {"message": "Todos os produtos foram removidos."}, 200
+        else:
+            return {"message": "Nenhum produto encontrado para remover."}, 404
+
+    except Exception as e:
+        error_msg = "Não foi possível deletar todos os produtos."
+        logger.error(f"Erro ao deletar todos os produtos: {str(e)}")
+        return {"message": error_msg}, 400
