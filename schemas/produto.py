@@ -4,6 +4,14 @@ from model.produto import Produto
 from datetime import datetime
 
 
+class ProdutoEditarSchema(BaseModel):
+
+    id: int = 1
+    nome: str = "Toxina Botulínica 3ml"
+    quantidade: Optional[int] = 50
+    valor: float = 1768.34
+    unidade: str = "Rio Design Barra - RJ"
+    validade: str = "2023-12-25"
 
 
 class ProdutoSchema(BaseModel):
@@ -21,6 +29,7 @@ class ProdutoBuscaSchema(BaseModel):
         feita apenas com base no nome do produto.
     """
     id: str = "1"
+
 
 
 class ListagemProdutosSchema(BaseModel):

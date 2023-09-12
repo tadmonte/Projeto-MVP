@@ -63,6 +63,40 @@ def add_produto(body: ProdutoSchema):
         return {"mesage": error_msg}, 400
 
 
+@app.put('/editar', tags=[produto_tag],
+          responses={"200": ProdutoViewSchema, "404": ErrorSchema, "400": ErrorSchema})
+def editar(body: ProdutoEditarSchema):
+    try:
+               
+        if not body:
+            return {"message": "Dados do produto não fornecidos no JSON"}, 400
+
+        session = Session()
+
+        with session.begin_nested():
+            produto = session.query(Produto).filter(Produto.id == body.id).first()
+
+            if not produto:
+                return {"message": f"Produto com ID {body.id} não encontrado"}, 404
+
+            produto.nome = body.nome
+            produto.quantidade = body.quantidade
+            produto.valor = body.valor
+            produto.unidade = body.unidade
+
+            if 'validade' in body:
+                produto.validade = datetime.strptime(body['validade'], '%Y-%m-%d')
+
+            session.commit()
+        
+        return apresenta_produto(produto), 200
+
+    except Exception as e:
+        error_msg = "Não foi possível editar o produto."
+        logger.error(f"Erro ao editar produto com ID {produto_id}: {str(e)}")
+        return {"message": error_msg}, 400
+
+
 @app.get('/lista', tags=[produto_tag],
          responses={"200": ListagemProdutosSchema, "404": ErrorSchema})
 def get_produtos():
@@ -139,3 +173,5 @@ def del_produto(query: ProdutoBuscaSchema):
 
     # retorna a representação de produto
     return apresenta_produto(produto), 200
+
+
