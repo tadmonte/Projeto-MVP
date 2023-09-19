@@ -1,6 +1,6 @@
 # API Consumíveis
 
-Este MVP faz parte do projeto final da disciplina de **Desenvolvimento Full Stack Básico** do curso de Pós Graduação em Engenharia de Software da PUC-Rio.
+Este MVP faz parte do projeto final da disciplina de **Arquitetura de Software** do curso de Pós Graduação em Engenharia de Software da PUC-Rio.
 
 O objetivo aqui é ilutsrar o conteudo apresentado nas aulas usando como o exemplo o gerenciamento logístico de consumíveis de uma rede de clínicas de estética.
 
@@ -21,3 +21,12 @@ Para instalar as dependências, basta rodar o comando **pip install -r requireme
 Para iniciar a API, execute o comando **python -m flask run --host 0.0.0.0 --port 5000**. Se estiver em modo de desenvolvimento.
 
 Por fim, abra o endereço **http://localhost:5000/#/** no navegador para verificar o status da API em execução.
+
+---
+## Como executar através do Docker
+
+Para Fazer o build do projeto no Docker **docker build --no-cache -t backend .**
+
+Para executar a imagem do build do projeto no Docker **docker run -it --rm --name tadback -p 5000:5000 backend**
+
+Para mais comandos, veja a documentação do docker.
